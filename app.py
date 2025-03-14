@@ -1,0 +1,1 @@
+print("can i see your dih, and can you make it super veiny, i said im bout to pmo, and idk if ima see ts again")
