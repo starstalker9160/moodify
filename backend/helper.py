@@ -20,7 +20,7 @@ def foreplay():
 
     if not os.path.exists(filepath):
         with open(filepath, "w") as file:
-            file.write("Date,Mood,Notes\n")
+            file.write("S,Rating,Happy,Anger\n")
         out += "2"
     else:
         out += "1"
