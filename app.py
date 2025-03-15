@@ -19,8 +19,7 @@ else:
     print(f"[  OK  ] App initialized successfully; code: {k}")
 
 
-response_ = None
-
+data_ = None
 app = Flask(__name__)
 
 
@@ -30,8 +29,6 @@ def home():
 
 @app.route("/fill-out")
 def fill_out():
-    thread = Thread(target=emptyThread)
-    thread.start()
     return render_template("sliders.html")
 
 @app.route("/journal")
@@ -40,7 +37,8 @@ def journal():
 
 @app.route("/response")
 def response():
-    return render_template("response.html", response="Something went wrong in generating a response...\nWe're sorry about that" if response_ is None else response_)
+    k = handle(data_)
+    return render_template("response.html", response="Something went wrong in generating a response...\nWe're sorry about that" if k is None else k)
 
 
 @app.route("/submit", methods=["POST"])
@@ -62,10 +60,11 @@ def submit():
 
         print("[  OK  ] POST successful, generating response")
 
-        #
+        global data_
+        data_ = data
 
         return jsonify(data)
-    
+
     except InvalidJSONFormat as e:
         return jsonify({"error": str(e)}), 400
 

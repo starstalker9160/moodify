@@ -28,15 +28,14 @@ def foreplay() -> str:
     pycache_path = os.path.join(os.getcwd(), "backend/__pycache__")
     if os.path.exists(pycache_path):
         shutil.rmtree(pycache_path)
-    
+
     return out
 
 
-def emptyThread() -> None:
-    pass
-
-
 def handle(d: dict) -> None:
+    if d == None:
+        return None
+
     try:
         prompt = f"""
             You are an advice bot in a mood journal app, the user has entered their feelings such that:
@@ -51,8 +50,7 @@ def handle(d: dict) -> None:
         response = client.models.generate_content(
             model="gemini-2.0-flash", contents=prompt
         )
-        
-        print(response.text)
+
         return response.text
     except Exception as e:
         print(f"Error generating response: {e}")
