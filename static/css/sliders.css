@@ -14,10 +14,6 @@ h1 {
     font-size: 7vh;
 }
 
-input::-webkit-progress-value {
-    background: #001659;
-}
-
 ::selection {
     background-color: #001659;
     color: #F6F9FB;

@@ -37,6 +37,16 @@ def journal():
     return render_template("journal.html")
 
 
+@app.errorhandler(404)
+def not_found_404(e):
+    return render_template("404.html"), 404
+
+
+@app.errorhandler(405)
+def not_found_405(e):
+    return render_template("405.html"), 405
+
+
 if __name__ == "__main__":
     try:
         app.run(host="127.0.0.1", port=8080, debug=False)
