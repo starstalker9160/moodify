@@ -57,7 +57,7 @@ br {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: calc(100%/5);
+    width: calc(100%/3);
     align-items: center;
 }
 
@@ -70,7 +70,7 @@ br {
 
 table {
     border-collapse: separate;
-    width: 80%;
+    width: 50%;
     height: auto;
     table-layout: fixed;
 }
@@ -83,4 +83,17 @@ td {
 
 td.black {
     background-color: black;
+}
+
+
+#calendar-a table tr:first-child td:first-child {
+    background-color: #EFE2FA;
+}
+
+#calendar-b table tr:first-child td:first-child {
+    background-color: #780116;
+}
+
+#calendar-c table tr:first-child td:first-child {
+    background-color: #C8D53E;
 }
