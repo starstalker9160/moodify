@@ -2,8 +2,8 @@ import os, shutil
 from google import genai
 
 
-def foreplay() -> str:
-    """Initialization of the app, (foreplay before the good stuff)
+def initialize() -> str:
+    """Initialization of the app
         1. Create db if not existing
         2. Clear pycache to avoid bugs
     """
@@ -33,6 +33,7 @@ def foreplay() -> str:
 
 
 def handle(d: dict) -> None:
+    """Generate AI Response based on data"""
     if d == None:
         return None
 

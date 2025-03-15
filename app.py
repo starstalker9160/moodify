@@ -12,7 +12,7 @@ from flask import (
 
 print("[  OK  ] Starting app...")
 
-k = "[" + foreplay() + "]"
+k = "[" + initialize() + "]"
 if k not in ["[I-11]", "[I-22]"]:
     raise InitializationErr(f"App unable to initialize, failed with error code: {k}")
 else:
