@@ -13,10 +13,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
 
     <link rel="stylesheet" href="/static/css/journal.css">
-    <title>moodify | Home</title>
+    <script src="/static/js/journal.js"></script>
+    <title>moodify | Journal</title>
 </head>
 <body>
     <h1>Journal</h1>
     <h3><i>how you've been doing lately...</i></h3>
+    <br>
+    <div class="container">
+        <div class="e">
+            <h3>Happiness</h3>
+            <div class="calendar" id="calendar-a"><table><tbody></tbody></table></div>
+        </div>
+        <div class="e">
+            <h3>Anger</h3>
+            <div class="calendar" id="calendar-b"><table><tbody></tbody></table></div>
+        </div>
+        <div class="e">
+            <h3>Anxiety</h3>
+            <div class="calendar" id="calendar-c"><table><tbody></tbody></table></div>
+        </div>
+    </div>
 </body>
 </html>
