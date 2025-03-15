@@ -33,6 +33,40 @@ p {
     padding: 0px 10vw;
 }
 
+button {
+    box-sizing: border-box;
+    font-family: "Poppins", monospace;
+    font-size: 2vh;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #2A6796;
+    background: none;
+    padding: 10px 20px;
+    user-select: none;
+    transition: all 0.2s linear;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #2A6796;
+    z-index: -5;
+    transition: width 0.3s ease-in-out;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+button:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
 ::selection {
     background-color: #001659;
     color: #F6F9FB;
