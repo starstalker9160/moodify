@@ -42,8 +42,11 @@ def handle(d: dict) -> None:
                 - happy, on a scale of 1 to 5 where 1 means crying and 5 means elated: {d["happy"]}
                 - angry, on a scale of 1 to 5 where 1 means calm and 5 means fuming: {d["anger"]}
                 - anxiety, on a scale of 1 to 5 where 1 means none at all and 5 means near vomiting: {d["anxiousness"]}
-            Give me advice in one paragraph no longer than 100 words
-            Do not hallucinate, do not make up facts, be kind and talk soothingly.
+            Give me advice in one two paragraphs, first one acknowledging their feeligns (no more than 30 words)
+            and second one (no more than 50 words) giving actionable advice to better their mood, or if they're already
+            really happy then to spread that happiness to the peopl around them.
+            Respond in plain text, no markdown formatting, do not hallucinate, do not make up facts, be kind and talk
+            soothingly.
         """
 
         client = genai.Client(api_key="AIzaSyDNEZphU1r8peEA84nPCMlSn_48hxwQrBY")
