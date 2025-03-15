@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
+
+    <link rel="stylesheet" href="/static/css/sliders.css">
+    <script src="/static/js/sliders.js"></script>
+    <title>moodify | fill-out</title>
+</head>
+<body>
+    <div class="content">
+        <h1>How are you feeling today?</h1>
+        <div class="slider">
+            <span>happiness</span>
+            <input id="happy" type="range" min="1" max="5" step="1" value="4">
+            <div class="box"></div>
+        </div>
+        <div class="slider">
+            <span>anger</span>
+            <input id="anger" type="range" min="1" max="5" step="1" value="1">
+            <div class="box"></div>
+        </div>
+        <div class="slider">
+            <span>anxiousness</span>
+            <input id="anxiousness" type="range" min="1" max="5" step="1" value="1">
+            <div class="box"></div>
+        </div>
+        <pre><button onclick="window.location.href='/journal'">     submit   <i class="fa-solid fa-arrow-right-long"></i>  </button></pre>
+    </div>
+</body>
+</html>
