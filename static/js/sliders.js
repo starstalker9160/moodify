@@ -27,4 +27,28 @@ document.addEventListener("DOMContentLoaded", function() {
     updateBoxColor("happy", 0);
     updateBoxColor("anger", 1);
     updateBoxColor("anxiousness", 2);
+
+
+    document.querySelector("button").addEventListener("click", function() {
+        const happyValue = document.getElementById("happy").value;
+        const angerValue = document.getElementById("anger").value;
+        const anxiousnessValue = document.getElementById("anxiousness").value;
+
+        const data = {
+            happy: parseInt(happyValue),
+            anger: parseInt(angerValue),
+            anxiousness: parseInt(anxiousnessValue)
+        };
+
+        fetch('/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => console.log('Data received:', data))
+        .catch(error => console.error('Error:', error));
+    });
 });

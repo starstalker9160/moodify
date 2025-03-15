@@ -6,10 +6,7 @@ from flask import (
     Flask,
     render_template,
     request,
-    jsonify,
-    send_from_directory,
-    url_for,
-    redirect,
+    jsonify
 )
 
 print("[  OK  ] Starting app...")
@@ -35,6 +32,35 @@ def fill_out():
 @app.route("/journal")
 def journal():
     return render_template("journal.html")
+
+
+@app.route("/submit", methods=["POST"])
+def submit():
+    try:
+        data = request.get_json()
+
+        if not isinstance(data, dict):
+            raise InvalidJSONFormat("Not proper JSON, failed with error code: [P-01]")
+
+        required_keys = ["happy", "anger", "anxiousness"]
+
+        if not all(key in data for key in required_keys):
+            raise InvalidJSONFormat("Weird keys in JSON data, failed with error code: [P-02]")
+
+        if not all(1 <= data[key] <= 5 for key in required_keys if isinstance(data[key], int)):
+            raise InvalidJSONFormat("Invalid values for JSON keys, failed with error code: [P-03]")
+
+        handle(data)
+        print("[  OK  ] POST successful, generating response")
+
+        return jsonify(data)
+    
+    except InvalidJSONFormat as e:
+        return jsonify({"error": str(e)}), 400
+
+    except Exception as e:
+        print("Legitimately no idea what the hell happened")
+        return jsonify({"error": "Invalid data received"}), 400
 
 
 @app.errorhandler(404)
