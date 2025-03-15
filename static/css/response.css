@@ -30,6 +30,7 @@ p {
     text-align: center;
     font-weight: 300;
     font-size: 4vh;
+    padding: 0px 10vw;
 }
 
 ::selection {
