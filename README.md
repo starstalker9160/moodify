@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a><img src="https://raw.githubusercontent.com/starstalker9160/moodify/refs/heads/main/moodify_logo.png?token=GHSAT0AAAAAADAQLOVUZ7TXDZDMDEXELTOWZ6VU6ZQ" alt="moodify" width=500></a>
+  <a><img src="https://github.com/starstalker9160/moodify/blob/main/moodify_logo.png" alt="moodify" width=500></a>
 </h1>
 
 <h4 align="center">A mood tracker for your mental health.</h4>
@@ -12,7 +12,7 @@
   <a href="#credits">Credits</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/starstalker9160/moodify/refs/heads/main/moodify_ui.png?token=GHSAT0AAAAAADAQLOVUDNUVDMBGTIOZZPCIZ6VU7KA)
+![screenshot](https://github.com/starstalker9160/moodify/blob/main/moodify_ui.png)
 
 ## Key Features
 
