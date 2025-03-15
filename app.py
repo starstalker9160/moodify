@@ -1,4 +1,5 @@
-from threading import Timer
+import queue
+from threading import Timer, Thread
 from backend.helper import *
 from backend.exceptions import *
 from webbrowser import open as webbrowser_open
@@ -18,6 +19,8 @@ else:
     print(f"[  OK  ] App initialized successfully; code: {k}")
 
 
+response_ = None
+
 app = Flask(__name__)
 
 
@@ -27,17 +30,24 @@ def home():
 
 @app.route("/fill-out")
 def fill_out():
+    thread = Thread(target=emptyThread)
+    thread.start()
     return render_template("sliders.html")
 
 @app.route("/journal")
 def journal():
     return render_template("journal.html")
 
+@app.route("/response")
+def response():
+    return render_template("response.html", response="Something went wrong in generating a response...\nWe're sorry about that" if response_ is None else response_)
+
 
 @app.route("/submit", methods=["POST"])
 def submit():
     try:
         data = request.get_json()
+        print(data)
 
         if not isinstance(data, dict):
             raise InvalidJSONFormat("Not proper JSON, failed with error code: [P-01]")
@@ -50,8 +60,9 @@ def submit():
         if not all(1 <= data[key] <= 5 for key in required_keys if isinstance(data[key], int)):
             raise InvalidJSONFormat("Invalid values for JSON keys, failed with error code: [P-03]")
 
-        handle(data)
         print("[  OK  ] POST successful, generating response")
+
+        #
 
         return jsonify(data)
     

@@ -1,4 +1,2 @@
-os
 flask
-shutil
 google-genai

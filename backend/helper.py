@@ -1,5 +1,5 @@
+import os, shutil
 from google import genai
-import os, sys, time, shutil, random
 
 
 def foreplay() -> str:
@@ -32,6 +32,10 @@ def foreplay() -> str:
     return out
 
 
+def emptyThread() -> None:
+    pass
+
+
 def handle(d: dict) -> None:
     try:
         prompt = f"""
@@ -49,5 +53,6 @@ def handle(d: dict) -> None:
         )
         
         print(response.text)
+        return response.text
     except Exception as e:
         print(f"Error generating response: {e}")

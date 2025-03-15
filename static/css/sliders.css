@@ -102,3 +102,7 @@ h1 {
     color: #ffffff;
     cursor: pointer;
 }
+
+.content button:disabled {
+    cursor: not-allowed;
+}

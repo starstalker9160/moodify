@@ -1,0 +1,38 @@
+html { background-color: #FFF9EB; height: 100vh; width: 100vw; margin: 0px; }
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 7vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    margin-top: 2rem;
+    padding: 0px;
+}
+
+p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 4vh;
+}
+
+::selection {
+    background-color: #001659;
+    color: #F6F9FB;
+}
