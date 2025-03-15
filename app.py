@@ -1,5 +1,4 @@
-import queue
-from threading import Timer, Thread
+from threading import Timer
 from backend.helper import *
 from backend.exceptions import *
 from webbrowser import open as webbrowser_open
