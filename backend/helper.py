@@ -7,7 +7,7 @@ def foreplay() -> str:
         1. Create db if not existing
         2. Clear pycache to avoid bugs
     """
-    filepath = "db/moodJournal.csv"
+    filepath = "static/db/moodJournal.csv"
     folder = os.path.dirname(filepath)
 
     out = "I-"
@@ -20,7 +20,7 @@ def foreplay() -> str:
 
     if not os.path.exists(filepath):
         with open(filepath, "w") as file:
-            file.write("S,Rating,Happy,Anger\n")
+            file.write("S,Happy,Anger,Anxiety\n")
         out += "2"
     else:
         out += "1"
