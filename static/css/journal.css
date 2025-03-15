@@ -62,17 +62,22 @@ br {
 }
 
 .calendar {
-    height: 20%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 table {
     border-collapse: separate;
-    height: 100%;
+    width: 80%;
+    height: auto;
     table-layout: fixed;
 }
 
 td {
     background-color: white;
+    aspect-ratio: 1 / 1;
     position: relative;
 }
 
