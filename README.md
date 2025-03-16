@@ -9,7 +9,7 @@
 <p align="center">
   <a href="#key-features">What it does</a> •
   <a href="#how-to-use">Installation</a> •
-  <a href="#credits">Credits</a>
+  <a href="./moodify - Stack Underflow - Presentation.pdf">Presentation</a>
 </p>
 
 ![screenshot](./moodify_ui.png)
@@ -29,11 +29,3 @@ Install dependencies and run app.py
 # Install required dependencies 
 pip install -r requirements.txt
 python .\app.py
-```
-
-## Credits
-
-This software uses the following open source packages:
-
-- [Flask](https://flask.palletsprojects.com/en/stable/)
-- [Google Gemini](https://ai.google.dev/)
