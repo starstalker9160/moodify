@@ -1,5 +1,6 @@
 import os, shutil
 from google import genai
+from backend.secrets import token
 
 
 def initialize() -> str:
@@ -50,7 +51,7 @@ def handle(d: dict) -> None:
             soothingly.
         """
 
-        client = genai.Client(api_key="AIzaSyDNEZphU1r8peEA84nPCMlSn_48hxwQrBY")
+        client = genai.Client(api_key=token)
         response = client.models.generate_content(
             model="gemini-2.0-flash", contents=prompt
         )
