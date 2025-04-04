@@ -1,40 +1,31 @@
-
+# moodify
 <h1 align="center">
   <br>
-  <a><img src="https://github.com/starstalker9160/moodify/blob/main/moodify_logo.png" alt="moodify" width=500></a>
+  <a><img src="./moodify_logo.png" alt="logo" width=500></a>
 </h1>
 
-<h4 align="center">A mood tracker for your mental health.</h4>
+<h4 align="center">A python based mood tracking journal app</h4>
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#credits">Credits</a>
+  <a href="#key-features">What it does</a> •
+  <a href="#how-to-use">Installation</a> •
+  <a href="./moodify - Stack Underflow - Presentation.pdf">Presentation</a>
 </p>
 
-![screenshot](https://github.com/starstalker9160/moodify/blob/main/moodify_ui.png)
+![screenshot](./moodify_ui.png)
 
-## Key Features
+## What it does
 
 * Sliders to accurate define your emotions and mood
 * Personalized response to help you using Gemini
 * Journal to track your mood from precious sessions
 * Gives you customized route to improving mental health
 
-## How To Use
+## Installation
 
 Install dependencies and run app.py
 
 ```bash
 # Install required dependencies 
 pip install -r requirements.txt
-
-# Run the app
-```
-
-## Credits
-
-This software uses the following open source packages:
-
-- [Flask](https://flask.palletsprojects.com/en/stable/)
-- [Google Gemini](https://ai.google.dev/)
+python .\app.py
